@@ -38,3 +38,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# RSpec
+group :development, :test do
+  gem "rspec" , "3.0.0.rc1"
+  gem "rspec-rails" , "3.0.0.rc1"
+end
