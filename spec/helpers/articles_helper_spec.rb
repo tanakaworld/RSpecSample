@@ -11,5 +11,19 @@ require 'spec_helper'
 #   end
 # end
 describe ArticlesHelper, :type => :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '#posted_on' do
+    before do
+      @now = Time.now
+      @article = Article.create(
+          title: "First Post",
+          body: "Hello"
+      )
+    end
+
+    it {
+      expect(rendered).to eq(
+                              "<html><body>Hello</body></html>"
+                          )
+    }
+  end
 end
