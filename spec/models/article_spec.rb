@@ -24,4 +24,12 @@ describe Article do
       expect(@article).to_not be_valid
     }
   end
+  context "Set Title" do
+    before do
+      @article = Article.new(title: "My First Blog")
+    end
+    it {
+      expect(@article).to be_valid
+    }
+  end
 end
